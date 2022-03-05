@@ -1,5 +1,5 @@
 import { opine } from "https://deno.land/x/opine@2.1.2/mod.ts";
-import { parse } from "https://deno.land/std/flags/mod.ts"
+import { parse } from "https://deno.land/std@0.128.0/flags/mod.ts"
 
 const args = parse(Deno.args);
 const app = opine();
@@ -20,5 +20,5 @@ app.all('/proxy', function(req, res) {
 });
 
 const listener = app.listen(args.port || 3000, function() {
-  console.log('Proxy is listening on port ' + listener.address().port);
+  console.log('Proxy is listening on port ' + args.port || 3000);
 });
