@@ -1,7 +1,7 @@
 # Simple Deno CORs Proxy
 
 ## Usage:
-Start the server:
+Start the server (be sure to use a commit hash like `b6537f6` as shown here):
 ```js
 deno run --allow-net https://github.com/josephrocca/simple-deno-cors-proxy/raw/b6537f6/main.js --port=3000
 ```
