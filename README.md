@@ -7,5 +7,6 @@ deno run --allow-net https://github.com/josephrocca/simple-deno-cors-proxy/raw/b
 ```
 Use it like this:
 ```js
-await fetch("http://localhost:3000/?url=https://example.com");
+let text = await fetch("http://localhost:3000/?url=https://example.com").then(r => r.text());
+console.log(text);
 ```
